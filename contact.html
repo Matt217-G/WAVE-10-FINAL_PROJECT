@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | GodlyGains</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="board-header">
+    <div class="header-left">
+      <h1>GodlyGains</h1>
+    </div>
+    <div class="header-right">
+      <nav>
+        <a href="contact.html">Contact</a>
+        <a href="">workouts</a>
+        <a href="index.html">Dashboard</a>
+        <button id="theme-btn">dark mode🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="contact-section">
+      <h1>Get in Touch</h1>
+      <h3>Have a question or feedback? Send a message below.</h3>
+
+      <form id="contact-form">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" required>
+
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" required>
+
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p id="contact-confirmation"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Habit Tracker</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

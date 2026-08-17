@@ -1,0 +1,338 @@
+
+:root {
+  --bg: #e8e8ea;
+  --card-bg: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #666;
+  --text-secondary: #555;
+  --border: #ddd;
+  --accent: #333;
+  --accent-text: #fff;
+}
+
+body.dark-mode {
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --text: #f0f0f0;
+  --text-muted: #aaa;
+  --text-secondary: #ccc;
+  --border: #333;
+  --accent: #ccc;
+  --accent-text: #121212;
+}
+
+body {
+  background: var(--bg);
+  margin: 0;
+  padding: 40px;
+  font-family: 'Familjen Grotesk', Arial, sans-serif;
+}
+/* This section is for the header */
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 28px 40px;
+  margin-bottom: 20px;
+  color: var(--text);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+  z-index: 100;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.header-right nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 1.1rem;
+}
+
+.header-right nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.header-right nav a:hover {
+  text-decoration: underline;
+}
+
+.header-right nav button {
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.header-right nav button:hover {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.dashboard-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 40px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-card h2 {
+  margin: 0 0 6px 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-transform: lowercase;
+  font-weight: 700;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.hero-row{
+  display: flex;
+  gap: 20px;
+}
+
+.hero {
+  flex: 1;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+}
+
+.hero h1 {
+  margin: 0 0 12px 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hero h3 {
+  margin: 0;
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#date-time-display {
+  flex: 0 0 180px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#todayLabel {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+#add-habit-section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#add-habit-section h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+#habit-form {
+  display: flex;
+  gap: 10px;
+}
+
+#habit-name {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+#habit-form button {
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#habit-form button:hover {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+/* habit card section */
+#habits-section {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#habits-section h2 {
+  margin: 0 0 20px 0;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+#habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+.complete-btn,
+.remove-btn {
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-right: 10px;
+  transition: background 0.15s ease;
+}
+.complete-btn:hover{
+  background: #d4f4dd;
+}
+.remove-btn:hover{
+  background: #fddede;
+}
+
+
+#exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.exercise-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-card h3 {
+  margin: 0 0 8px 0;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.exercise-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+
+#contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 20px;
+
+}
+
+#contact-form label{
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 10px;
+
+}
+
+#contact-form input
+#contact-form textarea{
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+#contact-form button{
+  margin-top: 16px;
+  background-color: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#contact-conformation{
+  margin-top: 16px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.habit-card {
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  list-style: none;
+}
+
+.habit-title {
+  color: var(--text);
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+

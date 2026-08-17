@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GodlyGains</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+ 
+  <header class="board-header">
+    <div class="header-left">
+      <h1>GodlyGains</h1>
+    </div>
+    <div class="header-right">
+      <nav>
+      <a href="contact.html">Contact</a>
+      <a href="">workouts</a>
+      <a href="index.html">Dashboard</a>
+      <button id="theme-btn">dark mode🌙</button>
+    </nav>
+    </div>
+  </header>
+ 
+  <main>
+    <div class="dashboard-grid">
+      <div class="dashboard-left">
+        <article class="stat-card">
+          <h2>current streak</h2>
+          <p id="current-streak">0</p>
+        </article>
+        <article class="stat-card">
+          <h2>total habits</h2>
+          <p id="total-habits">0/0</p>
+        </article>
+        <article class="stat-card">
+          <h2>habits completed</h2>
+          <p id="habits-completed">0</p>
+        </article>
+      </div>
+
+      <div class="dashboard-right">
+        <div class="hero-row">
+        <section class="hero">
+          <div class="hero-text">
+          <h1>Work your Mind,Body,
+              And the Spirit</h1>
+          <h3>Build daily habits to transform the mind, And explore exercises to strengthen your temple</h3>
+          </div>
+        </section>
+        
+        <div id="date-time-display">
+            <p id="todayLabel"></p>
+          </div>
+        </div>
+
+        <section id="add-habit-section">
+      <h2>Add a Habit</h2>
+      <form id="habit-form">
+        <input type="text" id="habit-name" placeholder="exp: Drink water" required>
+        <button id="add-task-btn"type="button">Add Habit</button>
+      </form>
+    </section>
+    <section id="habits-section">
+      <h2>Your Habits</h2>
+      <div id="habit-list">
+      </div>
+    </section>
+    <section class="hero" id="exercise-search-section">
+    <h1>Exercise Explorer</h1>
+    <h3 id="exercise-count">Loading exercises...</h3>
+    <div id="search-bar">
+      <input type="text" id="exercise-search" placeholder="Search loaded exercises">
+      <button id="refresh-btn">Refresh</button>
+    </div>
+  </section>
+  <section id="exercise-grid"></section>
+      </div>
+    </div> 
+  </main>
+ 
+  <footer>
+    <p>&copy; 2026 Habit Tracker</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
